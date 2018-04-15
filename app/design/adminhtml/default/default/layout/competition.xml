@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <competition_adminhtml_competitionbackend_index>
+	<reference name="content">
+	  <block type="competition/adminhtml_competitionbackend" name="competitionbackend" template="competition/competitionbackend.phtml"/>
+	</reference>
+  </competition_adminhtml_competitionbackend_index>
+  <competition_adminhtml_competition_index>
+	<reference name="content">
+	  <block type="competition/adminhtml_competition" name="competition" />
+	</reference>
+  </competition_adminhtml_competition_index>
+  <competition_adminhtml_competitionstores_index>
+	<reference name="content">
+	  <block type="competition/adminhtml_competitionstores" name="competitionstores" />
+	</reference>
+  </competition_adminhtml_competitionstores_index>
+</layout>

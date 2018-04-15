@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<config>
+	  <tabs>
+		<sigma translate="label" module="competition">
+            <label>Sigma</label>
+            <sort_order>0</sort_order>
+        </sigma>
+	  </tabs>
+	  <sections>
+		<sigma_competition  translate="label" module="competition">                    
+		<label>Competition Form</label>
+		<tab>sigma</tab>
+		<frontend_type>text</frontend_type>
+		<sort_order>0</sort_order>
+		<show_in_default>1</show_in_default>
+		<show_in_website>0</show_in_website>
+		<show_in_store>0</show_in_store>            
+					<groups>
+				      <sigma_competition translate="label"> 
+					  <label>Competition Form</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>0</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>0</show_in_website>
+					  <show_in_store>0</show_in_store>
+				       <fields>
+                          <form_status translate="label">
+                            <label>Status</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+							<comment>Enable or Disable Competition Form</comment>
+                          </form_status>
+                          <form_title translate="label">
+                            <label>Title</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+							<comment>Form Title</comment>
+                          </form_title>
+                          <form_description translate="label">
+                            <label>Description</label>
+							<frontend_type>textarea</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+							<comment>Form Description</comment>
+                          </form_description>
+                          <form_after_submit_message translate="label">
+                            <label>After Submit Message</label>
+							<frontend_type>textarea</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+							<comment>Message To Display After Submit</comment>
+                          </form_after_submit_message>
+                          <form_submit_email translate="label">
+                            <label>Email</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+							<comment>Email Address To Send Form Data ( Leave Empty To Not To Email Form Data )</comment>
+                          </form_submit_email>
+                          <form_before_submit translate="label">
+                            <label>Form Before Submit Confirmation</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+							<comment>Is Confirmation Required Before Form Submission</comment>
+                          </form_before_submit>
+                          <form_promotion_image translate="label">
+                            <label>Image To Display In Form</label>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">catalog/product/watermark</upload_dir>
+                            <base_url type="media" scope_info="1">catalog/product/watermark</base_url>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+							<comment>Upload Image To Display In Form</comment>
+                          </form_promotion_image>
+                          <form_redirect_page translate="label">
+                            <label>Form Redirect Page If Disabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_Diyoptions15238035297</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </form_redirect_page>
+					   </fields>
+					   </sigma_competition>
+					</groups>
+		</sigma_competition>
+	  </sections>
+</config>

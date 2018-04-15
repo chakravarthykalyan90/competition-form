@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Sigma_Competition>
+      <version>0.1.0</version>
+    </Sigma_Competition>
+  </modules>
+  <frontend>
+    <routers>
+      <front_competition>
+        <use>standard</use>
+          <args>
+            <module>Sigma_Competition</module>
+            <frontName>competition</frontName>
+          </args>
+      </front_competition>
+    </routers>
+		<layout>
+		  <updates>
+			<competition>
+			  <file>competition.xml</file>
+			</competition>
+		  </updates>
+		</layout>
+  </frontend>
+  <global>
+    <helpers>
+      <competition>
+        <class>Sigma_Competition_Helper</class>
+      </competition>
+    </helpers>
+	<blocks>
+	  <competition>
+		<class>Sigma_Competition_Block</class>
+	  </competition>
+	</blocks>
+	<models>
+	  <competition>
+		<class>Sigma_Competition_Model</class>
+		<resourceModel>competition_mysql4</resourceModel>
+	  </competition>
+	  <competition_mysql4>
+		<class>Sigma_Competition_Model_Mysql4</class>
+		<entities>		  
+			  <competition>
+				<table>sigma_competition</table>
+			  </competition>		  
+			  <competitionstores>
+				<table>sigma_competition_store</table>
+			  </competitionstores>
+        </entities>
+	  </competition_mysql4>
+	</models>
+	<resources>
+	  <competition_setup>
+		<setup>
+		  <module>Sigma_Competition</module>
+		</setup>
+		<connection>
+		  <use>core_setup</use>
+		</connection>
+	  </competition_setup>
+	  <competition_write>
+		<connection>
+		  <use>core_write</use>
+		</connection>
+	  </competition_write>
+	  <competition_read>
+		<connection>
+		  <use>core_read</use>
+		</connection>
+	  </competition_read>
+	</resources>
+  </global>
+  <admin>
+	<routers>
+	  <competition>
+	    <use>admin</use>
+		<args>
+		  <module>Sigma_Competition</module>
+		  <frontName>admin_competition</frontName>
+		</args>
+	  </competition>
+	</routers>
+  </admin>
+  <adminhtml>
+	<menu>
+	  <competition module="competition">
+		<title>Competition</title>
+		<sort_order>100</sort_order>
+		<children>
+		  <competitionbackend module="competition">
+			<title>Competition Place Holder</title>
+			<sort_order>0</sort_order>
+			<action>admin_competition/adminhtml_competitionbackend</action>
+		  </competitionbackend>
+		  <competition module="competition">
+		    <title>Manage Competition</title>
+			<sort_order>0</sort_order>
+			<action>admin_competition/adminhtml_competition</action>
+		  </competition>
+		  <competitionstores module="competition">
+		    <title>Manage Competitionstores</title>
+			<sort_order>20</sort_order>
+			<action>admin_competition/adminhtml_competitionstores</action>
+		  </competitionstores>
+		</children>
+	  </competition>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<competition translate="title" module="competition">
+			  <title>Competition</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+		  <competitionbackend translate="title">
+			<title>Competition Place Holder</title>
+		  </competitionbackend>
+		  <competition translate="title">
+			<title>Manage Competition</title>
+			<sort_order>0</sort_order>
+		  </competition>
+		  <competitionstores translate="title">
+			<title>Manage Competitionstores</title>
+			<sort_order>20</sort_order>
+		  </competitionstores>
+			  </children>
+			</competition>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<competition>
+		  <file>competition.xml</file>
+		</competition>
+	  </updates>
+	</layout>
+  </adminhtml>
+</config> 
